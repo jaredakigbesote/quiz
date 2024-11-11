@@ -142,7 +142,7 @@ const questions = [{
                 text: "Ford",
                 correct: false
             },
-        ]  
+        ]
     },
     {
         question: "What year did the nintendo ds come out?",
@@ -166,7 +166,7 @@ const questions = [{
                 text: "2004",
                 correct: true
             },
-        ] 
+        ]
     },
     {
         question: "Which kingdom united and formed the German Empire?",
@@ -190,7 +190,7 @@ const questions = [{
                 text: "Kingdom of Saxony",
                 correct: false
             },
-        ]  
+        ]
     },
     {
         question: "which planet has the most moons?",
@@ -238,6 +238,9 @@ const questions = [{
                 text: "Oulu",
                 correct: false
             },
-        ] 
+        ]
     },
-]
+];
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("button");
+const submitButton = document.getElementById("#sub-b");
