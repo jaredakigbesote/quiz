@@ -67,3 +67,9 @@ h2 {
 .ans-b:hover {
     background-color: rgba(152, 235, 235, 0.781);
 }
+.correct {
+     background: rgb(6, 190, 6);
+}
+.incorrect {
+    background: red;
+}
