@@ -242,37 +242,30 @@ const questions = [{
     },
 ];
 const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("button");
-const submitButton = document.getElementById("sub-b");
+const answerButton = document.getElementById("answer-button");
+const nextButton = document.getElementById("sub-b");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
 function startQuiz() {
     currentQuestionIndex = 0;
-    score  = 0;
-    nextButton.indexhtml = "sub-b";
+    score = 0;
+    nextButton.innerHTML = "Next";
     showQuestion();
 }
+
 function showQuestion() {
-    resetState();
     let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo+ "." + currentQuestion.question;
+    let questionNo = currentQuestionIndex = 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
-        const button = document.currentElement ("button");
+        const button = document.createElement("button");
         button.innerHTML = answer.text;
-        button.classlist.add("ans-b");
+        button.classList.add("ans-b");
         answerButton.appendChild(button);
     });
 }
 
-function resetState(){
-    nextButton.style.display = "none"
-    while(answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons)
-    }
-}
-
-showQuestion();
+startQuiz();
