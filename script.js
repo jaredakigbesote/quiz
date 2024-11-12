@@ -1,4 +1,4 @@
-const questions = [{
+const questions = [  {
         question: "Which movie is the higest grossing of all time?",
         answers: [{
                 text: "Star Wars: The Force Awakens",
@@ -22,7 +22,7 @@ const questions = [{
             },
         ]
     },
-    {
+     {
         question: "In what year did the Russian revolution end?",
         answers: [{
                 text: "1923",
@@ -251,14 +251,14 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Next";
+    nextButton.innerHTML = "Submit";
     showQuestion();
 }
 
-function showQuestion(){
+function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex = 1;
+    let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
@@ -266,7 +266,7 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("ans-b");
         answerButtons.appendChild(button);
-        if(answer.correct){
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
@@ -274,24 +274,24 @@ function showQuestion(){
 }
 
 
-function resetState(){
+function resetState() {
     nextButton.style.display = "none";
-    while(answerButtons.firstChild){
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 //colour select//
-function selectAnswer(e){
+function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
-    if(isCorrect){
+    if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++
-    }else{
+    } else {
         selectedBtn.classList.add("incorrect");
     }
-    Array.from(answerButtons.children).forEach(button =>{
-        if(button.dataset.correct === "true"){
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true") {
             button.classList.add("correct");
 
         }
@@ -300,26 +300,26 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function showScore(){
+function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
-function handleNextButton(){
+function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < question.lenght){
+    if (currentQuestionIndex < questions.lenght) {
         showQuestion();
-    }else{
+    } else {
         showScore();
     }
 }
 
-nextButton.addEventListener("click", ()=>{
-    if(currentQuestionIndex < question.lenght){
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.lenght) {
         handleNextButton();
-    }else{
+    } else {
         startQuiz();
     }
 });
