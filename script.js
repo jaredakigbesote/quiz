@@ -1,4 +1,5 @@
-const questions = [  {
+//questions//
+const questions = [ {
         question: "Which movie is the higest grossing of all time?",
         answers: [{
                 text: "Star Wars: The Force Awakens",
@@ -21,7 +22,7 @@ const questions = [  {
                 correct: false
             },
         ]
-    },
+     },
      {
         question: "In what year did the Russian revolution end?",
         answers: [{
@@ -254,7 +255,7 @@ function startQuiz() {
     nextButton.innerHTML = "Submit";
     showQuestion();
 }
-
+//question and answers set up//
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -299,7 +300,7 @@ function selectAnswer(e) {
     });
     nextButton.style.display = "block";
 }
-
+// submit button setup//
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
