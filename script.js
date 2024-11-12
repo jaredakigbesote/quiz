@@ -242,8 +242,8 @@ const questions = [{
     },
 ];
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("button");
-const submitButton = document.getElementById("#sub-b");
+const answerButtons = document.getElementById("button");
+const submitButton = document.getElementById("sub-b");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -251,15 +251,28 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score  = 0;
-    nextButton.indexhtlm = "Next";
+    nextButton.indexhtml = "sub-b";
     showQuestion();
 }
 function showQuestion() {
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = question + "." + currentQuestion.question;
+    questionElement.innerHTML = questionNo+ "." + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
-        const button = document.currentElement ("button")
-    })
+        const button = document.currentElement ("button");
+        button.innerHTML = answer.text;
+        button.classlist.add("ans-b");
+        answerButton.appendChild(button);
+    });
 }
+
+function resetState(){
+    nextButton.style.display = "none"
+    while(answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons)
+    }
+}
+
+showQuestion();
