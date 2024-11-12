@@ -64,8 +64,12 @@ h2 {
     cursor: pointer;
     transition: 0.5s;
 }
-.ans-b:hover {
+.ans-b:hover:not([disabled]){
     background-color: rgba(152, 235, 235, 0.781);
+}
+.ans-b:disabled{
+    cursor: no-drop;
+
 }
 .correct {
      background: rgb(6, 190, 6);
