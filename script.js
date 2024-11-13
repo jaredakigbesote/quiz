@@ -63,7 +63,6 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Submit";
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
     showQuestion();
 }
 
@@ -135,7 +134,8 @@ function handleNextButton() {
 }
 
 nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < questions.lenght) {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.lenght){
         handleNextButton();
     } else {
         startQuiz();
