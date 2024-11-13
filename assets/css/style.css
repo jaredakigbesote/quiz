@@ -9,6 +9,12 @@ body {
     background-color: rgb(223, 142, 126);
 }
 
+.timer{
+    font-size: 40px;
+   display: flex;
+   flex-direction: row-reverse;
+}
+
 .main-head {
     background-color: black;
     color: rgb(17, 100, 253);
