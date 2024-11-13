@@ -237,6 +237,7 @@ const questions = [{
 
 
 ];
+const startingMinutes = 5;
 const topicElement = document.getElementById("topic");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-button");
@@ -313,7 +314,7 @@ function selectAnswer(e) {
 // submit button setup//
 function showScore() {
     resetState();
-    questionElement.innerHTML = ` You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
@@ -334,5 +335,19 @@ nextButton.addEventListener("click", () => {
         startQuiz();
     }
 });
+//timer//
+let time = startingMinutes * 30;
 
+const countdownEl = document.getElementById("timer");
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown(){
+    const minutes = Math.floor(time / 30);
+    let seconds = time % 30;
+
+    countdownEl.innerHTML =`${minutes}: ${seconds}`
+
+    time--;
+}
 startQuiz();
