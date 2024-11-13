@@ -47,7 +47,193 @@ const questions = [{
                 correct: false
             },
         ]
-    }
+    }, {
+        question: "What is the closest star system to ours?",
+        answers: [{
+                text: "Epsilon Indi",
+                correct: false
+            },
+            {
+                text: "Barnard's Star",
+                correct: false
+            },
+            {
+                text: "Alpha Canis Majoris",
+                correct: false
+            },
+            {
+                text: "Luhman 16",
+                correct: false
+            },
+            {
+                text: "Alpha Centauri",
+                correct: true
+            },
+        ]
+
+    }, {
+        question: "What country is known as the land of the rising sun?",
+        answers: [{
+                text: "South Africa",
+                correct: false
+            },
+            {
+                text: "Australia",
+                correct: false
+            },
+            {
+                text: "Cuba",
+                correct: false
+            },
+            {
+                text: "Japan",
+                correct: true
+            },
+            {
+                text: "England",
+                correct: false
+            },
+        ]
+
+    }, {
+        question: "Which athlete holds the most olympic medals?",
+        answers: [{
+                text: "Usain Bolt",
+                correct: false
+            },
+            {
+                text: "Larisa Latynina",
+                correct: false
+            },
+            {
+                text: "Michael Phelps",
+                correct: true
+            },
+            {
+                text: "Mo Farah",
+                correct: false
+            },
+            {
+                text: "Katō Sawao",
+                correct: false
+            },
+        ]
+    }, {
+        question: "Which car manufacturer built the first supercar?",
+        answers: [{
+                text: "Porsche 911",
+                correct: false
+            },
+            {
+                text: "Lamborghini",
+                correct: true
+            },
+            {
+                text: "Aston Martin",
+                correct: false
+            },
+            {
+                text: "Ferrari",
+                correct: false
+            },
+            {
+                text: "Ford",
+                correct: false
+            },
+        ]
+    }, {
+        question: "What year did the nintendo ds come out?",
+        answers: [{
+                text: "2000",
+                correct: false
+            },
+            {
+                text: "2003",
+                correct: false
+            },
+            {
+                text: "2001",
+                correct: false
+            },
+            {
+                text: "2006",
+                correct: false
+            },
+            {
+                text: "2004",
+                correct: true
+            },
+        ]
+    }, {
+        question: "Which kingdom united and formed the German Empire?",
+        answers: [{
+                text: "East Frankish kingdom,",
+                correct: false
+            },
+            {
+                text: "Kingdom of Bavaria",
+                correct: false
+            },
+            {
+                text: "Kingdom of Prussia",
+                correct: true
+            },
+            {
+                text: "Kingdom of Württemberg",
+                correct: false
+            },
+            {
+                text: "Kingdom of Saxony",
+                correct: false
+            },
+        ]
+    }, {
+        question: "which planet has the most moons?",
+        answers: [{
+                text: "Uranus",
+                correct: false
+            },
+            {
+                text: "Jupiter",
+                correct: false
+            },
+            {
+                text: "Saturn",
+                correct: true
+            },
+            {
+                text: "Neptune",
+                correct: false
+            },
+            {
+                text: "Mars",
+                correct: false
+            },
+        ]
+    }, {
+        question: "What is the capital city of Finland",
+        answers: [{
+                text: "Helsinki",
+                correct: true
+            },
+            {
+                text: "Oslo",
+                correct: false
+            },
+            {
+                text: "Tallinn",
+                correct: false
+            },
+            {
+                text: "Tampere",
+                correct: false
+            },
+            {
+                text: "Oulu",
+                correct: false
+            },
+        ]
+    },
 
 
 ];
@@ -68,10 +254,17 @@ function startQuiz() {
 
 //question and answers set up//
 function showQuestion() {
+    console.log(currentQuestionIndex);
+
     resetState();
+
+    console.log(currentQuestionIndex);
+
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    console.log(currentQuestionIndex);
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -85,7 +278,8 @@ function showQuestion() {
 
     });
 }
-function showTopic(topic){
+
+function showTopic(topic) {
     resetState();
     topicElement.innerText = topic.topic
 }
@@ -119,14 +313,14 @@ function selectAnswer(e) {
 // submit button setup//
 function showScore() {
     resetState();
-    questionElement.innerHTML = `Well done ${username} You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = ` You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
 function handleNextButton() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.lenght) {
+    if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
         showScore();
@@ -134,8 +328,7 @@ function handleNextButton() {
 }
 
 nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.lenght){
+    if (currentQuestionIndex < questions.length) {
         handleNextButton();
     } else {
         startQuiz();
