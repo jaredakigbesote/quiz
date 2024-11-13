@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="png/jpg" href="css/images/icons8-globe-showing-europe-africa-48">
 </head>
-<body>
-    <h1>Welcome To My Quiz</h1>
-    <h2>Create a user name and test your Knowledge</h2>
-    <h3>When ready click start to begin the quiz!</h3>
-    
+
+<body id=home-p>
+    <header id="main-footer">
+        <h1 class="user-h">Welcome To My Quiz</h1>
+        <h2 class="user-h">Create a user name and test your Knowledge</h2>
+        <h3 class="user-h">When ready click submit to begin the quiz!</h3>
+    </header>
+    <Div id="main-bp">
+        <form id="sub-box" action="/quiz.html">
+            <Label id="home-u">Username</Label>
+            <input id="c-username" type="text" name="user-name" placeholder="Create Username" required>
+            <input id="start-b" type="submit" />
+        </form>
+
+        <script src="script.js"></script>
+    </Div>
+    <footer id="foot">
+        <H1 id="h-foot">There are 10 questions from a range of topics</H1>
+        <h2 id="h-foot">TOPICS:</h2>
+        <h3 id="h-foot">History, Space, Movies, Cars, Video Games, Sports</h3>
+    </footer>
+
 </body>
+
 </html>

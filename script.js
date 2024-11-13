@@ -1,5 +1,6 @@
 //questions//
 const questions = [{
+        topic: "History",
         question: "In what year did the Russian revolution end?",
         answers: [{
                 text: "1923",
@@ -22,10 +23,35 @@ const questions = [{
                 correct: false
             },
         ]
-    },
+    }, {
+        topics: "Movies",
+        question: "Which movie is the higest grossing of all time?",
+        answers: [{
+                text: "Star Wars: The Force Awakens",
+                correct: false
+            },
+            {
+                text: "Titanic",
+                correct: false
+            },
+            {
+                text: "The Lion King",
+                correct: false
+            },
+            {
+                text: "Avatar",
+                correct: true
+            },
+            {
+                text: "Avengers: Endgame",
+                correct: false
+            },
+        ]
+    }
 
-    
+
 ];
+const topicElement = document.getElementById("topic");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-button");
 const nextButton = document.getElementById("sub-b");
@@ -37,8 +63,10 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Submit";
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
     showQuestion();
 }
+
 //question and answers set up//
 function showQuestion() {
     resetState();
@@ -55,7 +83,12 @@ function showQuestion() {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
+
     });
+}
+function showTopic(topic){
+    resetState();
+    topicElement.innerText = topic.topic
 }
 
 
@@ -87,7 +120,7 @@ function selectAnswer(e) {
 // submit button setup//
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `Well done ${username} You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
@@ -101,7 +134,7 @@ function handleNextButton() {
     }
 }
 
- nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.lenght) {
         handleNextButton();
     } else {

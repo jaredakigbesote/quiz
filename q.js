@@ -239,3 +239,4 @@
         },
     ]
 },
+shuffledQuestions = questions.sort(() => Math.random() - .5)
