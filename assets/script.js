@@ -291,6 +291,7 @@ function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
+
 }
 //colour select//
 function selectAnswer(e) {
@@ -317,6 +318,7 @@ function showScore() {
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
+    clearInterval(timeDown);
 }
 
 function handleNextButton() {
@@ -325,6 +327,7 @@ function handleNextButton() {
         showQuestion();
     } else {
         showScore();
+        timeComplete();
     }
 }
 
@@ -357,11 +360,19 @@ function displayTime(second){
     timeCount.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10?'0':''}${sec}`
 
 }
-
 function endTime(){
     timeCount.innerHTML = "TIME OUT"
-}
 
-    
+}
+function timeComplete(){
+    timeCount.innerHTML = "Finished"
+}
+ function restartTime(){
+    displayTime = timeSecond;
+
+ }
+ //username display//
+
+
 
 startQuiz();
