@@ -311,8 +311,8 @@ function selectAnswer(e) {
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    restartButton.innerHTML = "Play Again";
-    restartButton.style.display = "block";
+    playagainButton.innerHTML = "Play Again";
+    playagainButton.style.display = "block";
     clearInterval(timeDown);
 }
 
@@ -321,8 +321,8 @@ function handleNextButton() {
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
-        showScore();
-        timeComplete();
+      showScore();
+      timeComplete();
     }
 
 }
@@ -384,8 +384,21 @@ function handleRestartButton() {
     if (timeSecond <= 0 || timeSecond < 1) {
         window.location.reload();
     }
+    
 
 }
+const playagainButton = document.getElementById("play-again") 
+restartButton.addEventListener("click", () => {
+      if(currentQuestionIndex === questions.length){
+        handlePlayAgainButton();
+      }
+})
+function handlePlayAgainButton(){
+    if(currentQuestionIndex === questions.length){
+        window.location.reload();
+    }
+}
+
 
 
 
