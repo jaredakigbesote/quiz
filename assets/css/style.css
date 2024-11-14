@@ -52,6 +52,19 @@ h2 {
     color: rgb(14, 14, 146);
 }
 
+#disc{
+    background: white;
+    border: 5px solid black;
+    max-width: 65%;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 35px;
+    text-align: center;
+
+    
+}
+
 #sub-b {
     font-size: 35px;
     width: 200px;

@@ -237,11 +237,10 @@ const questions = [{
 
 
 ];
-const startingMinutes = 5;
-const topicElement = document.getElementById("topic");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-button");
 const nextButton = document.getElementById("sub-b");
+const username = document.getElementById("user");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -280,10 +279,6 @@ function showQuestion() {
     });
 }
 
-function showTopic(topic) {
-    resetState();
-    topicElement.innerText = topic.topic
-}
 
 
 function resetState() {
@@ -361,17 +356,18 @@ function displayTime(second){
 
 }
 function endTime(){
-    timeCount.innerHTML = "TIME OUT"
+    timeCount.innerHTML = "TIME OUT";
+
 
 }
 function timeComplete(){
     timeCount.innerHTML = "Finished"
 }
- function restartTime(){
-    displayTime = timeSecond;
+;
 
- }
  //username display//
+ 
+
 
 
 
