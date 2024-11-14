@@ -311,8 +311,8 @@ function selectAnswer(e) {
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
+    restartButton.innerHTML = "Play Again";
+    restartButton.style.display = "block";
     clearInterval(timeDown);
 }
 
@@ -324,6 +324,7 @@ function handleNextButton() {
         showScore();
         timeComplete();
     }
+
 }
 
 nextButton.addEventListener("click", () => {
@@ -339,34 +340,58 @@ let timeSecond = 30;
 
 displayTime(timeSecond);
 
-const timeDown = setInterval (() => {
+const timeDown = setInterval(() => {
     timeSecond--;
     displayTime(timeSecond);
-    if(timeSecond <= 0 || timeSecond < 1){
+    if (timeSecond <= 0 || timeSecond < 1) {
         endTime();
         clearInterval(timeDown);
     }
 
-},1000)
+}, 1000)
 
-function displayTime(second){
+function displayTime(second) {
     const min = Math.floor(second / 60);
     const sec = Math.floor(second % 60);
     timeCount.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10?'0':''}${sec}`
 
 }
-function endTime(){
+
+function endTime() {
     timeCount.innerHTML = "TIME OUT";
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    restartButton.innerHTML = "restart";
+    restartButton.style.display = "block";
+
 
 
 }
-function timeComplete(){
+
+function timeComplete() {
     timeCount.innerHTML = "Finished"
 }
-;
 
- //username display//
- 
+const restartButton = document.getElementById("restart");
+restartButton.addEventListener("click", () => {
+    if (timeSecond <= 0 || timeSecond < 1) {
+        handleRestartButton();
+    }
+}
+)
+
+function handleRestartButton() {
+    if (timeSecond <= 0 || timeSecond < 1) {
+        window.location.reload();
+    }
+
+}
+
+
+
+
+
+
 
 
 
