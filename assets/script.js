@@ -336,18 +336,32 @@ nextButton.addEventListener("click", () => {
     }
 });
 //timer//
-let time = startingMinutes * 30;
+const timeCount = document.querySelector("p");
+let timeSecond = 30;
 
-const countdownEl = document.getElementById("timer");
+displayTime(timeSecond);
 
-setInterval(updateCountdown, 1000);
+const timeDown = setInterval (() => {
+    timeSecond--;
+    displayTime(timeSecond);
+    if(timeSecond <= 0 || timeSecond < 1){
+        endTime();
+        clearInterval(timeDown);
+    }
 
-function updateCountdown(){
-    const minutes = Math.floor(time / 30);
-    let seconds = time % 30;
+},1000)
 
-    countdownEl.innerHTML =`${minutes}: ${seconds}`
+function displayTime(second){
+    const min = Math.floor(second / 60);
+    const sec = Math.floor(second % 60);
+    timeCount.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10?'0':''}${sec}`
 
-    time--;
 }
+
+function endTime(){
+    timeCount.innerHTML = "TIME OUT"
+}
+
+    
+
 startQuiz();
