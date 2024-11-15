@@ -66,12 +66,14 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 
 -__Colour Indication__-
 - I used the colours green and red as visual indicators for the user to understand instantly if they got answer right or wrong clearly showing the correct to the incorrect.
-![colorans](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20box.PNG)
+ 
+ ![colorans](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20box.PNG)
 
 -__Colours__-
 - I tried to use a calm colour for the background to not distract users as the took the quiz. 
 - I used bolder more eye catcthing colours for the important information for the user such as blue for questions and green for buttons.
-![colours](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/colours%20quiz.PNG)
+ 
+ ![colours](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/colours%20quiz.PNG)
 
 
 ## User Experince
