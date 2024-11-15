@@ -43,7 +43,10 @@ I used bolder more eye catcthing colours for the important information for the u
 
 ### First time user
  I tried to give as much information as i could about the quiz to the user on the home page.
- I 
+ I tried to make it easy for anyone to understand and complete the test on their first try.
+
+ ## Testing
+ No errors where found in the style.css file.
 
 
 
