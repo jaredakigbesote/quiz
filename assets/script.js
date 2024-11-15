@@ -240,7 +240,7 @@ const questions = [{
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-button");
 const nextButton = document.getElementById("sub-b");
-const username = document.getElementById("user");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -361,7 +361,7 @@ function endTime() {
     timeCount.innerHTML = "TIME OUT";
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    restartButton.innerHTML = "restart";
+    restartButton.innerHTML = "Restart";
     restartButton.style.display = "block";
 
 

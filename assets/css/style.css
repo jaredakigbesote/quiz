@@ -139,9 +139,20 @@ h2 {
 .correct {
     background: rgb(6, 190, 6);
 }
+#d-g{
+    color:  rgb(6, 190, 6);
+}
+
+#d-q{
+    color: rgb(14, 14, 146);
+}
+
 
 .incorrect {
     background: red;
+}
+#d-r{
+    color: red;
 }
 
 #home-p {
@@ -215,4 +226,28 @@ h2 {
 #sub-box{
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 425px){
+    .user-h{
+        font-size: 20px;
+    }
+    #c-username{
+        font-size: 10px;
+    }
+    #home-u{
+        font-size: 10px;
+    }
+    #disc{
+        font-size: 15px;
+    }
+    #foot{
+        font-size: 10px;
+    }
+
+}
+@media screen and (max-width: 768px){
+    #disc{
+        font-size: 20px;
+    }
 }

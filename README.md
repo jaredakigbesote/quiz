@@ -29,6 +29,21 @@ I wouldl like for users to be able to create a username to be able to track thei
 -__catogories__-
 Give the user the option of topics and range from difficult questions to easier ones.
 
+## Design
+
+-__Colour Indication__-
+I used the colours green and red as visual indicators for the user to understand instantly if they got answer right or wrong clearly showing the correct to the incorrect.
+
+-__Colours__-
+I tried to use a calm colour for the background to not distract users as the took the quiz. 
+I used bolder more eye catcthing colours for the important information for the user such as blue for questions and green for buttons.
+
+
+## User Experince
+
+### First time user
+ I tried to give as much information as i could about the quiz to the user on the home page.
+ I 
 
 
 
