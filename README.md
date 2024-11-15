@@ -46,23 +46,34 @@ I used bolder more eye catcthing colours for the important information for the u
  I tried to make it easy for anyone to understand and complete the test on their first try.
 
  ## Testing
+ ### validation
+
  No errors where found in the style.css file.
+ No erros where found in my html code. [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Fjaredakigbesote.github.io%2Fquiz%2F
+
+ -__javascript__-
+ My submit button was broken so to test if it was working i console.log() the currentQuestionsIndex to try and locate the problem and i found that i had a typo in one of of scripts.
+
+ My timer was also broken and would not restart when the test was complete or when the time ran out. I was able to find a way to fix both problems by having separate buttons for each replay the 'Restart' and 'Play Again' buttons.
+
+ After fixing these issues there are no erros in my console. 
 
 
 
 
-Testing LOSER DO NOT FORGET TO TEST AND VALIDATE YOUR CODE OR I WILL BUST ON YOUR FACE ANS STEAL YOUR LUNCHLYS
-Validation
 
 
-Deployment
+
+## Deployment
 To deploy this site on github I took the following steps.
 I navigated to the settings from the repository.
 I then went to the pages section in the settings and changed the branch selector to main.
 To deploy this page i then return to the repository page and click on deployments and choose a build to load.
 Link to page:
 
-credits
-content
+## credits
+### content
+- I used wikipedia to help get information for my questions that i used [Wikipedia](https://www.wikipedia.org/)
 
-media
+- The icons that were used are from fontawesome [Font Awesome](https://fontawesome.com/).
+
