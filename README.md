@@ -1,22 +1,25 @@
 # My General Knowledge Quiz
 My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz for those who want to test themselves on how quick they can process a question and select the right answer. I designed it to played over and over with for users to try and improve their score.
-![Main] 
+![Main](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20main.PNG)
 
 ## Features
 
 -__Multipul choice interactive answer boxes__-
 I designed these boxes to give visual indication when hovering over by changing the colour to a light blue and changing the mouse crusor to a pointer.
 The answer boxes also change color depending on what was the correct answer and what the user chose, if they picked the wrong answer the background will change red while also showing the right answer in green.
-![Interactiveanswer]
+I also added a block button feature to the answers once one was chosen locking in the users selection not allowing them to change it.
+![Interactiveanswer]https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20questions.PNG
 -__Score Tracker__-
 I added a score  tracker at the end of the quiz to give the user feed back on how well they did and how many questions they got right.
 The score also displays when the timer runs out regradless if the user finised or not.
-![ScoreFin]
-![ScoreOut]
+![ScoreFin](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20fin%20score.PNG)
+![ScoreOut](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/time%20out%20quiz.PNG)
 -__Timer__-
 The timer gives the user 30 seconds to complete the test when the timer runs out a message 'TIME OUT' will be displayed.
 If the user completes the test in the given time 'Finished' will be displayed.
-![Timer]
+![Timer](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20timer.PNG)
+![timefin](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20done.PNG)
+![timeout](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20time%20out.PNG)
 -__submit button__-
 The submit button is hidden from the user until they choose a answer, when the button is visiable they can click it to move on to the next question.
 When the clicking the submit button on the last question the users will be shown their score and the timer will stop.
@@ -25,11 +28,11 @@ if u get the play again bu working
 -__Restart button__--
 The restart button dissplays when the timer runs out and the user has not completed the quiz.
 The button refreshes the page allowing the user to start form the beginnging.
-![Re]
+![Re](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/re.PNG)
 
 -__Play again button__-
 The play again button allows the user to start the test from the start again once they complete it.
-![Pa]
+![Pa](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20pa.PNG)
 
 ## Features To Add
 -__scoreboard__-
@@ -44,7 +47,7 @@ Give the user the option of topics and range from difficult questions to easier 
 
 -__Colour Indication__-
 I used the colours green and red as visual indicators for the user to understand instantly if they got answer right or wrong clearly showing the correct to the incorrect.
-![colorans]
+![colorans]https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20box.PNG
 
 -__Colours__-
 I tried to use a calm colour for the background to not distract users as the took the quiz. 
