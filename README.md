@@ -11,7 +11,7 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 - The answer boxes also change color depending on what was the correct answer and what the user chose, if they picked the wrong answer the background will change red while also showing the right answer in green.
 - I also added a block button feature to the answers once one was chosen locking in the users selection not allowing them to change it.
 
-![Interactiveanswer]https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20questions.PNG
+![Interactiveanswer](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20questions.PNG)
 
 
 -__Score Tracker__-
@@ -38,7 +38,7 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 - The submit button is hidden from the user until they choose a answer, when the button is visiable they can click it to move on to the next question.
 - When the clicking the submit button on the last question the users will be shown their score and the timer will stop.
 
-![Sub]
+![Sub](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20submit.PNG)
 
 -__Restart button__--
 - The restart button dissplays when the timer runs out and the user has not completed the quiz.
@@ -66,12 +66,12 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 
 -__Colour Indication__-
 - I used the colours green and red as visual indicators for the user to understand instantly if they got answer right or wrong clearly showing the correct to the incorrect.
-![colorans]https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20box.PNG
+![colorans](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/quiz%20box.PNG)
 
 -__Colours__-
 - I tried to use a calm colour for the background to not distract users as the took the quiz. 
 - I used bolder more eye catcthing colours for the important information for the user such as blue for questions and green for buttons.
-![colours]
+![colours](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/colours%20quiz.PNG)
 
 
 ## User Experince
@@ -83,7 +83,7 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
  ## Testing
  ### validation
 
- - No errors where found in the style.css file. [(Jigsaw) validator]
+ - No errors where found in the style.css file. [(Jigsaw) validator] https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjaredakigbesote.github.io%2Fquiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
  - No erros where found in my html code. [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Fjaredakigbesote.github.io%2Fquiz%2F
 
  -__javascript__-
@@ -106,7 +106,7 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 - To deploy this page i then return to the repository page and click on deployments and choose a build to load.
   
   
-  Link to page:
+  Link to page:https://jaredakigbesote.github.io/quiz/
 
 ## credits
 ### content
