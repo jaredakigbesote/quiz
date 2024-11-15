@@ -48,7 +48,7 @@ I used bolder more eye catcthing colours for the important information for the u
  ## Testing
  ### validation
 
- No errors where found in the style.css file.
+ No errors where found in the style.css file. [(Jigsaw) validator]
  No erros where found in my html code. [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Fjaredakigbesote.github.io%2Fquiz%2F
 
  -__javascript__-

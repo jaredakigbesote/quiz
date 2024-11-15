@@ -358,7 +358,7 @@ function displayTime(second) {
 function endTime() {
     timeCount.innerHTML = "TIME OUT";
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `You ran out of time you scored ${score} out of ${questions.length}!`;
     restartButton.innerHTML = "Restart";
     restartButton.style.display = "block";
 
