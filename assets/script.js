@@ -388,7 +388,7 @@ function handleRestartButton() {
 
 }
 const playagainButton = document.getElementById("play-again") 
-restartButton.addEventListener("click", () => {
+playagainButton.addEventListener("click", () => {
       if(currentQuestionIndex === questions.length){
         handlePlayAgainButton();
       }
