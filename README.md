@@ -95,6 +95,8 @@ My genral Knowledge Quiz is designed to be a fast paced general knowledge quiz f
 
  - After fixing these issues there are no erros in my console. 
 
+ ![console](https://github.com/jaredakigbesote/quiz/blob/main/assets/media/console%20quiz.PNG)
+
 
 
 
